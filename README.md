@@ -13,7 +13,7 @@ Prerequis
 
 Dependencies
 =====================
-        launch ./install.lib.php before all to install dependencies (See ./lib/* for dependencies)
+        launch ./install.dependencies.php before all to install dependencies (See ./lib/* for dependencies)
 
 Remarques
 =====================
