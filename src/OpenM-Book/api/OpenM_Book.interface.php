@@ -49,22 +49,35 @@ interface OpenM_Book extends OpenM_Book_Const {
     //signal const
     const SIGNAL_TYPE_BUG = "BUG";
     
+    //community management
+    const COMMUNITY_NAME = "CNA";
+    const COMMUNITY_ID = "CID";
+    const RETURN_COMMUNITY_PARENT_PARAMETER = "CPP";
+    const RETURN_COMMUNITY_CHILDS_PARAMETER = "CCP";
+    
     /**
      * ajoute un item dans la section exemple 2001 dans M1 toulouse
      * @param type $name
-     * @param type $treeId
-     * @param type $parentCommunityId
-     * @return HashtableString un boolean
+     * @param type $communityParentId
+     * @return HashtableString
      */
-    public function addCommunity($name, $treeId, $parentCommunityId);
+    public function addCommunity($name, $communityParentId);
 
     /**
      * M'ajoute dans un item passé en paramétre
      * @param String $communityId
-     * @return HashtableString contient un boolean
+     * @return HashtableString
      */
     public function registerMeIntoCommunity($communityId);
 
+    /**
+     * 
+     * @param String $communityId
+     * @param String $visibleByCommunityId
+     * @return HashtableString
+     */
+    public function modifyMyVisibilityOnCommunity($communityId, $visibleByCommunityIdJSONList);
+    
     /**
      * ajoute la valeur d'une propriétés
      * @param String $propertyId
@@ -80,13 +93,6 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @return HashtableString  listes des items  (nom/id)
      */
     public function getCommunityChilds($communityId);
-
-    /**
-     * 
-     * @param String $communityId
-     * @return HashtableString  Contient un boolean
-     */
-    public function getCommunityTree($communityId = NULL);
 
     /**
      * Retourne la liste des utilisateurs qui appartiennent à l'item (groupe) passé en paramettre
@@ -126,7 +132,7 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param String $itempId
      * @return HashtableString 
      */
-    public function removeMeFromCommunity($itemId);
+    public function removeMeFromCommunity($communistyId);
 
     /**
      * 
@@ -170,7 +176,7 @@ interface OpenM_Book extends OpenM_Book_Const {
      * retourne toutes les propriétés et group ect... de l'user
      * @return HashtableString les propriétés et item(gorupe)
      */
-    public function getMyData();
+    public function buildMyData();
     
     /**
      * 
