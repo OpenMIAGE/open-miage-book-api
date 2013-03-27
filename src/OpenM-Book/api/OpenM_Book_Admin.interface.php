@@ -22,13 +22,20 @@ Import::php("OpenM-Book.api.OpenM_Book_Const");
  */
 interface OpenM_Book_Admin extends OpenM_Book_Const {
 
-    const SECTION_PROPERTY_USER_CAN_ADD_ITEM_NAME = "user.can.add.item";
-    const SECTION_PROPERTY_ITEM_NAME_REGEXP_NAME = "reg.exp";
-    const SECTION_PROPERTY_MANAGE_SYNONYMS_NAME = "manage.synonyms";
-    const SECTION_PROPERTY_USER_CAN_ADD_ITEM_DEFAULT_VALUE = OpenM_Service::FALSE_PARAMETER_VALUE;
-    const SECTION_PROPERTY_ITEM_NAME_REGEXP_DEFAULT_VALUE = ".*";
-    const SECTION_PROPERTY_MANAGE_SYNONYMS_DEFAULT_VALUE = OpenM_Service::FALSE_PARAMETER_VALUE;
+    //section properties
+    const USER_CAN_ADD_COMMUNITY_PROPERTY_NAME = "user.can.add.community";
+    const COMMUNITY_NAME_REGEXP_PROPERTY_NAME = "reg.exp";
+    const MANAGE_SYNONYMS_PROPERTY_NAME = "manage.synonyms";
+    const NEED_VALIDATION_PROPERTY_NAME = "need.validation";
+    const MANAGE_PERIOD_PROPERTY_NAME = "manage.period";
+    const USER_CAN_ADD_COMMUNITY_PROPERTY_DEFAULT_VALUE = OpenM_Service::FALSE_PARAMETER_VALUE;
+    const COMMUNITY_NAME_REGEXP_PROPERTY_DEFAULT_VALUE = ".*";
+    const MANAGE_SYNONYMS_PROPERTY_DEFAULT_VALUE = OpenM_Service::FALSE_PARAMETER_VALUE;
+    
+    //errors
     const RETURN_ERROR_MESSAGE_NOT_ENOUGH_RIGHTS_VALUE = "Not enough rights, you must be an administrator.";
+    
+    //section parameters
     const RETURN_PARENT_SECTION_PARAMETER = "PSP";
     const RETURN_SECTION_PARAMETER = "SP";
     const RETURN_SECTION_CHILDS_PARAMETER = "SC";
