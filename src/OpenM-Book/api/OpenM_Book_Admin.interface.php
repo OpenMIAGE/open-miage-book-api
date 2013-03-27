@@ -50,13 +50,6 @@ interface OpenM_Book_Admin extends OpenM_Book_Const {
     public function addBranch($branchIdParent, $name);
 
     /**
-     * retire un item d'une section
-     * @param String $communityId
-     * @return HashtableString 
-     */
-    public function removeCommunity($communityId);
-
-    /**
      * supprime une section et tous se qu'elle contient
      * @param String $branchId
      * @return HashtableString boolean

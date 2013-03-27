@@ -45,16 +45,17 @@ interface OpenM_Book extends OpenM_Book_Const {
     //error message
     const RETURN_ERROR_MESSAGE_USER_ALREADY_REGISTERED_VALUE = "User already registered";
     const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_YOUNG_VALUE = "You're too young to register, the age limit is 13 years old";
+    const RETURN_ERROR_MESSAGE_PROPERTY_NOTFOUND_VALUE = "Property not found";
 
     //signal const
     const SIGNAL_TYPE_BUG = "BUG";
-    
+
     //community management
     const COMMUNITY_NAME = "CNA";
     const COMMUNITY_ID = "CID";
     const RETURN_COMMUNITY_PARENT_PARAMETER = "CPP";
     const RETURN_COMMUNITY_CHILDS_PARAMETER = "CCP";
-    
+
     /**
      * ajoute un item dans la section exemple 2001 dans M1 toulouse
      * @param type $name
@@ -77,7 +78,7 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @return HashtableString
      */
     public function modifyMyVisibilityOnCommunity($communityId, $visibleByCommunityIdJSONList);
-    
+
     /**
      * ajoute la valeur d'une propriétés
      * @param String $propertyId
@@ -92,7 +93,19 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param String $communityId
      * @return HashtableString  listes des items  (nom/id)
      */
-    public function getCommunityChilds($communityId);
+    public function getCommunityChilds($communityId = null);
+
+    /**
+     * 
+     * @param type $communityId
+     */
+    public function getCommunityAncestors($communityId = null);
+
+    /**
+     * 
+     * @param type $communityId
+     */
+    public function getCommunityParent($communityId = null);
 
     /**
      * Retourne la liste des utilisateurs qui appartiennent à l'item (groupe) passé en paramettre
@@ -171,20 +184,20 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @return HashtableString
      */
     public function validateUser($userId, $communityId);
-    
+
     /**
      * retourne toutes les propriétés et group ect... de l'user
      * @return HashtableString les propriétés et item(gorupe)
      */
     public function buildMyData();
-    
+
     /**
      * 
      * @param type $mailJSONList
      * @return HashtableString
      */
     public function invitPeople($mailJSONList);
-    
+
     /**
      * 
      * @param type $type
@@ -192,7 +205,7 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param type $message
      */
     public function signal($url, $message, $type = self::SIGNAL_TYPE_BUG);
-    
+
     /**
      * 
      * @param type $userId
@@ -200,8 +213,8 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param type $groupId
      * @return HashtableString
      */
-    public function signalUser($userId, $message, $groupId=null);
-    
+    public function signalUser($userId, $message, $groupId = null);
+
     /**
      * 
      * @param type $message
@@ -209,7 +222,6 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @return HashtableString
      */
     public function signalCommunity($communityId, $message);
-        
 }
 
 ?>

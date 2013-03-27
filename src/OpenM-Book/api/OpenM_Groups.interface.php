@@ -22,13 +22,15 @@ Import::php("OpenM-Book.api.OpenM_Book_Const");
  */
 interface OpenM_Groups extends OpenM_Book_Const {
 
+    //errors
     const RETURN_ERROR_MESSAGE_USER_NOT_IN_GROUPS_VALUE = "user not in groups";
     const RETURN_ERROR_MESSAGE_NOT_YOUR_PERSONAL_GROUP_VALUE = "not your personal groups";
     const RETURN_ERROR_MESSAGE_FORBIDDEN_OPERATION_INFINIT_CYCLE_ERROR_VALUE = "forbidden operation, you try to make an infinit cycle";
     const RETURN_ERROR_MESSAGE_USER_ALREADY_IN_GROUP_VALUE = "user already in group";
     const RETURN_ERROR_MESSAGE_GROUP_NOT_FOUND_IN_GROUP_VALUE = "group not found in group";
     const RETURN_ERROR_MESSAGE_USER_NOT_FOUND_IN_GROUP_VALUE = "user not found in group";
-    
+
+    //returns
     const RETURN_GROUP_LIST_PARAMETER = "GROUP_LIST";
     const RETURN_GROUP_ID_PARAMETER = "ID";
     const RETURN_GROUP_NAME_PARAMETER = "GNA";
@@ -57,15 +59,15 @@ interface OpenM_Groups extends OpenM_Book_Const {
 
     public function removeUserFromGroup($userId, $groupId);
 
-    public function getMyPersonalGroups();
-
-    public function getMyBookGroups();
-
     public function getMyGroups();
+
+    public function getMyCommunities();
+
+    public function getMyCommunitiesAndGroups();
     
-    public function getUsersFromPersonalGroup($groupId);
+    public function getUsersFromGroup($groupId);
     
-    public function getGroupsFromPersonalGroup($groupId);
+    public function getGroupsFromGroup($groupId);
 
     public function search($terms, $maxNumberResult=null, $userOnly=null);
 

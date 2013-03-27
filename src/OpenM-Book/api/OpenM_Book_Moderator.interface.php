@@ -40,6 +40,13 @@ interface OpenM_Book_Moderator extends OpenM_Book_Const {
      * @return HashtableString 
      */
     public function getCommunityModerators($communityId);
+    
+    /**
+     * retire un item d'une section
+     * @param String $communityId
+     * @return HashtableString 
+     */
+    public function removeCommunity($communityId);
 
     /**
      * 
