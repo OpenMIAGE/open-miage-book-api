@@ -23,6 +23,7 @@ Import::php("OpenM-Services.api.OpenM_Service");
 interface OpenM_Book_Const extends OpenM_Service {
     
     const RETURN_ERROR_MESSAGE_USER_NOT_REGISTERED_VALUE = "you're not registered";
+    const RETURN_ERROR_MESSAGE_USER_NOT_ACTIVATED_VALUE = "you're not activated";
     const RETURN_ERROR_MESSAGE_USER_NOT_FOUND_VALUE = "user not found";    
     const RETURN_ERROR_MESSAGE_GROUP_NOT_FOUND_VALUE = "group not found";
     
