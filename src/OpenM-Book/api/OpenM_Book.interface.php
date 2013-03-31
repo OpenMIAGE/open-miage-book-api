@@ -50,12 +50,6 @@ interface OpenM_Book extends OpenM_Book_Const {
     //signal const
     const SIGNAL_TYPE_BUG = "BUG";
 
-    //community management
-    const COMMUNITY_NAME = "CNA";
-    const COMMUNITY_ID = "CID";
-    const RETURN_COMMUNITY_PARENT_PARAMETER = "CPP";
-    const RETURN_COMMUNITY_CHILDS_PARAMETER = "CCP";
-
     /**
      * ajoute un item dans la section exemple 2001 dans M1 toulouse
      * @param type $name
@@ -74,10 +68,10 @@ interface OpenM_Book extends OpenM_Book_Const {
     /**
      * 
      * @param String $communityId
-     * @param String $visibleByCommunityId
+     * @param String $visibleByGroupAndCommunityIdJSONList
      * @return HashtableString
      */
-    public function modifyMyVisibilityOnCommunity($communityId, $visibleByCommunityIdJSONList);
+    public function modifyMyVisibilityOnCommunity($communityId, $visibleByGroupAndCommunityIdJSONList);
 
     /**
      * ajoute la valeur d'une propriétés
