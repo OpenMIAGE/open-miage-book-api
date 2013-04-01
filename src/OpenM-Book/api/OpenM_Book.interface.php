@@ -31,6 +31,7 @@ interface OpenM_Book extends OpenM_Book_Const {
     const RETURN_USER_LAST_NAME_PARAMETER = "ULN";
     const RETURN_USER_PHOTO_PARAMETER = "UPH";
     const RETURN_USER_PROPERTY_VALUE_PARAMETER = "UPV";
+    const RETURN_USER_IS_ADMIN_PARAMETER = "UIA";
 
     //prefiled value
     const FIRST_NAME_PROPERTY_VALUE_ID = -1;
