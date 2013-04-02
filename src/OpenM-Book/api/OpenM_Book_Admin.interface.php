@@ -27,8 +27,7 @@ interface OpenM_Book_Admin extends OpenM_Book_Const {
 
     //branch return parameters
     const RETURN_COMMUNITY_NAME_REGEXP_PARAMETER = "REG";
-    const RETURN_USER_CAN_REGISTER_PARAMETER = "UCR";
-    const RETURN_CONTAINS_ONLY_ONE_COMMUNITY_PARAMETER = "UCAI";
+    const RETURN_CONTAINS_ONLY_ONE_COMMUNITY_PARAMETER = "UCAC";
     const RETURN_VALIDATION_REQUIRED_PARAMETER = "VRP";
     const RETURN_MANAGE_PERIOD_PARAMETER = "MAP";
     const RETURN_PARENT_BRANCH_PARAMETER = "PBP";
@@ -36,7 +35,6 @@ interface OpenM_Book_Admin extends OpenM_Book_Const {
     const RETURN_BRANCH_CHILDS_PARAMETER = "BCP";
     const RETURN_BRANCH_ID_PARAMETER = "BID";
     const RETURN_BRANCH_NAME_PARAMETER = "BNP";
-    const RETURN_USER_CAN_ADD_COMMUNITY_PARAMETER = "UCAC";
     
     //return admin parameters
     const RETURN_ADMIN_LIST_PARAMETER = "ALP";
