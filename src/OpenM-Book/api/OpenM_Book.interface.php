@@ -88,7 +88,7 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param String $communityId
      * @return HashtableString  listes des items  (nom/id)
      */
-    public function getCommunityChilds($communityId = null);
+    public function getCommunity($communityId = null);
 
     /**
      * 
