@@ -100,7 +100,7 @@ interface OpenM_Book extends OpenM_Book_Const {
      * 
      * @param type $communityId
      */
-    public function getCommunityParent($communityId = null);
+    public function getCommunityParent($communityId);
 
     /**
      * Retourne la liste des utilisateurs qui appartiennent à l'item (groupe) passé en paramettre
