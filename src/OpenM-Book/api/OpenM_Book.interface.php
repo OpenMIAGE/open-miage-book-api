@@ -94,7 +94,7 @@ interface OpenM_Book extends OpenM_Book_Const {
      * 
      * @param type $communityId
      */
-    public function getCommunityAncestors($communityId = null);
+    public function getCommunityAncestors($communityId);
 
     /**
      * 
@@ -104,19 +104,21 @@ interface OpenM_Book extends OpenM_Book_Const {
 
     /**
      * Retourne la liste des utilisateurs qui appartiennent à l'item (groupe) passé en paramettre
-     * @param String $communityJSONList
+     * @param String $communityId
      * @param String $start pour la pagination
      * @param String $numberOfResult pour la pagination
      * @return HashtableString liste des utilisateur (userid, preferedName)
      */
-    public function getCommunityUsers($communityJSONList = null, $start = null, $numberOfResult = null);
+    public function getCommunityUsers($communityId, $start = null, $numberOfResult = null);
 
     /**
-     * retourne les user qu'il faut valider, que j'ai le droit de voir
-     * @param String $communityJSONList
-     * @return HashtableString liste des utilisateur à valider
+     * Retourne la liste des utilisateurs non validés qui appartiennent à l'item (groupe) passé en paramettre
+     * @param String $communityId
+     * @param String $start pour la pagination
+     * @param String $numberOfResult pour la pagination
+     * @return HashtableString liste des utilisateur (userid, preferedName)
      */
-    public function getNotValidUsers($communityJSONList = null);
+    public function getCommunityNotValidUsers($communityId, $start = null, $numberOfResult = null);
 
     /**
      * retourne les porporité de l'utilisateur passée en parametre, que j'ai le droit de voir
