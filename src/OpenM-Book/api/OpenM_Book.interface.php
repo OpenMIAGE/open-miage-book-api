@@ -75,15 +75,6 @@ interface OpenM_Book extends OpenM_Book_Const {
     public function modifyMyVisibilityOnCommunity($communityId, $visibleByGroupAndCommunityIdJSONList);
 
     /**
-     * ajoute la valeur d'une propriétés
-     * @param String $propertyId
-     * @param String $propertyValue
-     * @param String $visibilityGroupJSONList
-     * @return HashtableString contenant l'ID de la valeur
-     */
-    public function addPropertyValue($propertyId, $propertyValue);
-
-    /**
      * retourne la liste des items fils de l'item passé en paramètre
      * @param String $communityId
      * @return HashtableString  listes des items  (nom/id)
@@ -121,57 +112,11 @@ interface OpenM_Book extends OpenM_Book_Const {
     public function getCommunityNotValidUsers($communityId, $start = null, $numberOfResult = null);
 
     /**
-     * retourne les porporité de l'utilisateur passée en parametre, que j'ai le droit de voir
-     * @param String $userId id de l'utilisateur pour lequel récupérer les propriétées
-     * @param boolean|String $basicOnly
-     * @return HashtableString liste des propriétés avec leur valeurs
-     */
-    public function getUserProperties($userId = null, $basicOnly = null);
-
-    /**
-     * m'enregistre dans OpenM_Book
-     * @param String $firstName
-     * @param String $lastName
-     * @param String $birthDay
-     * @return HashtableString 
-     */
-    public function registerMe($firstName, $lastName, $birthDay);
-
-    /**
      * me retirer d'un item(groupe)
      * @param String $itempId
      * @return HashtableString 
      */
     public function removeMeFromCommunity($communistyId);
-
-    /**
-     * 
-     * @param String $propertyValueId
-     * @return HashtableString
-     */
-    public function removePropertyValue($propertyValueId);
-
-    /**
-     * ajoute ou modifie une valeur d'une propriétés
-     * @param String $propertyValueId
-     * @param String $propertyValue
-     * @return HashtableString conteint un boolean
-     */
-    public function setPropertyValue($propertyValueId, $propertyValue);
-
-    /**
-     * modifie une valeur d'une propriétés
-     * @param String $propertyValueId
-     * @param String $visibilityGroupJSONList
-     * @return HashtableString contient un boolean
-     */
-    public function setPropertyVisibility($propertyValueId, $visibilityGroupJSONList);
-
-    /**
-     * permet de se désinscrire de OpenM_Book
-     * @return HashtableString contient un boolean
-     */
-    public function unRegisterMe();
 
     /**
      * permet de valider un utilisateur, ou validation par paires
@@ -181,12 +126,6 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @return HashtableString
      */
     public function validateUser($userId, $communityId);
-
-    /**
-     * retourne toutes les propriétés et group ect... de l'user
-     * @return HashtableString les propriétés et item(gorupe)
-     */
-    public function buildMyData();
 
     /**
      * 
@@ -201,24 +140,8 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param type $url
      * @param type $message
      */
-    public function signal($url, $message, $type = self::SIGNAL_TYPE_BUG);
+    public function signal($url, $message, $type = self::SIGNAL_TYPE_BUG, $id = null);
 
-    /**
-     * 
-     * @param type $userId
-     * @param type $message
-     * @param type $groupId
-     * @return HashtableString
-     */
-    public function signalUser($userId, $message, $groupId = null);
-
-    /**
-     * 
-     * @param type $message
-     * @param type $communityId
-     * @return HashtableString
-     */
-    public function signalCommunity($communityId, $message);
 }
 
 ?>
