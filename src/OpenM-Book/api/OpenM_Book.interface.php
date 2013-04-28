@@ -22,32 +22,6 @@ Import::php("OpenM-Book.api.OpenM_Book_Const");
  */
 interface OpenM_Book extends OpenM_Book_Const {
 
-    const RETURN_USER_PROPERTY_LIST_PARAMETER = "UPL";
-    const RETURN_USER_GROUP_PROPERTY_VISIBILITY_LIST_PARAMETER = "PGVL";
-    const RETURN_USER_PROPERTY_ID_PARAMETER = "PID";
-    const RETURN_USER_PROPERTY_VALUE_ID_PARAMETER = "PVID";
-    const RETURN_USER_PROPERTY_NAME_PARAMETER = "UPN";
-    const RETURN_USER_FIRST_NAME_PARAMETER = "UFN";
-    const RETURN_USER_LAST_NAME_PARAMETER = "ULN";
-    const RETURN_USER_PHOTO_PARAMETER = "UPH";
-    const RETURN_USER_PROPERTY_VALUE_PARAMETER = "UPV";
-    const RETURN_USER_IS_ADMIN_PARAMETER = "UIA";
-
-    //prefiled value
-    const FIRST_NAME_PROPERTY_VALUE_ID = -1;
-    const NAME_PROPERTY_VALUE_ID = -2;
-    const PHOTO_ID_PROPERTY_VALUE_ID = -3;
-    const BIRTHDAY_ID_PROPERTY_VALUE_ID = -4;
-    const AGE_LIMIT_TO_REGISTER = 13;
-
-    //property pattern
-    const PROPERTY_NAME_PATTERN = "/^[a-z](([a-z]|\.)*[a-z])?$/";
-
-    //error message
-    const RETURN_ERROR_MESSAGE_USER_ALREADY_REGISTERED_VALUE = "User already registered";
-    const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_YOUNG_VALUE = "You're too young to register, the age limit is 13 years old";
-    const RETURN_ERROR_MESSAGE_PROPERTY_NOTFOUND_VALUE = "Property not found";
-
     //signal const
     const SIGNAL_TYPE_BUG = "BUG";
 
