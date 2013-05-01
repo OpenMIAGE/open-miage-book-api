@@ -28,8 +28,11 @@ interface OpenM_Book_Const extends OpenM_Service {
     const RETURN_ERROR_MESSAGE_GROUP_NOT_FOUND_VALUE = "group not found";
 
     //return users parameters
-    const RETURN_USER_LIST_PARAMETER = "USER_LIST";
-    const RETURN_USER_ID_PARAMETER = "ID";
+    const RETURN_USER_LIST_PARAMETER = "ULP";
+    const RETURN_USER_LIST_COUNT_PARAMETER = "ULC";
+    const RETURN_USER_ID_PARAMETER = "UID";
+    const RETURN_USER_NAME_PARAMETER = "UNA";
+    const RETURN_USER_PHOTO_PARAMETER = "UPH";
 
     //parameters patterns
     const USER_ID_PARAMETER_PATERN = "/^[1-9][0-9]*$/";
