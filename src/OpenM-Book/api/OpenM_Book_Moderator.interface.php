@@ -69,6 +69,14 @@ interface OpenM_Book_Moderator extends OpenM_Book_Const {
 
     /**
      * 
+     * @param String $communityId
+     * @param String $newName
+     * @return HashtableString
+     */
+    public function renameCommunity($communityId, $newName);
+
+    /**
+     * 
      * @param String $userId
      * @param String $communityId
      * @return HashtableString
