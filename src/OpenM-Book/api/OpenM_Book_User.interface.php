@@ -21,7 +21,7 @@ Import::php("OpenM-Book.api.OpenM_Book_Const");
  * @author Nicolas Rouzeaud & Gaël SAUNIER
  */
 interface OpenM_Book_User extends OpenM_Book_Const {
-    
+
     const RETURN_USER_PROPERTY_LIST_PARAMETER = "UPL";
     const RETURN_USER_GROUP_PROPERTY_VISIBILITY_LIST_PARAMETER = "PGVL";
     const RETURN_USER_PROPERTY_ID_PARAMETER = "PID";
@@ -34,9 +34,10 @@ interface OpenM_Book_User extends OpenM_Book_Const {
 
     //prefiled value
     const FIRST_NAME_PROPERTY_VALUE_ID = -1;
-    const NAME_PROPERTY_VALUE_ID = -2;
+    const LAST_NAME_PROPERTY_VALUE_ID = -2;
     const PHOTO_ID_PROPERTY_VALUE_ID = -3;
-    const BIRTHDAY_ID_PROPERTY_VALUE_ID = -4;
+    const DEFAULT_EMAIL_PROPERTY_VALUE_ID = -4;
+    const BIRTHDAY_ID_PROPERTY_VALUE_ID = -5;
     const AGE_LIMIT_TO_REGISTER = 13;
 
     //property pattern
@@ -107,7 +108,6 @@ interface OpenM_Book_User extends OpenM_Book_Const {
      * @return HashtableString contient un boolean
      */
     public function unRegisterMe();
-
 }
 
 ?>
