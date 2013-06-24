@@ -24,7 +24,10 @@ Import::php("util.time.Delay");
 interface OpenM_Book_Moderator extends OpenM_Book_Const {
 
     const DEFAULT_MODERATOR_VALIDITY = Delay::YEAR;
-    
+
+    //errors
+    const RETURN_ERROR_MESSAGE_NOT_ENOUGH_RIGHTS_VALUE = "Not enough rights, you must be at least a moderator.";
+
     /**
      * to add a moderator on an Item, you must be moderator on a parent Item
      * and this new moderator must be validated in an Item descendant
@@ -32,7 +35,7 @@ interface OpenM_Book_Moderator extends OpenM_Book_Const {
      * @param String $communityId
      * @return HashtableString boolean
      */
-    public function addCommunityModerator($userId, $communityId, $validity=null);
+    public function addCommunityModerator($userId, $communityId, $validity = null);
 
     /**
      * 
@@ -42,13 +45,20 @@ interface OpenM_Book_Moderator extends OpenM_Book_Const {
     public function getCommunityModerators($communityId);
 
     /**
+     * retire un item d'une section
+     * @param String $communityId
+     * @return HashtableString 
+     */
+    public function removeCommunity($communityId);
+
+    /**
      * 
      * @param String $userId
      * @param String $communityId
      * @return HashtableString boolean
      */
     public function removeCommunityModerartor($userId, $communityId);
-    
+
     /**
      * 
      * @param String $userId
@@ -56,7 +66,15 @@ interface OpenM_Book_Moderator extends OpenM_Book_Const {
      * @return HashtableString
      */
     public function removeCommunityUser($userId, $communityId);
-    
+
+    /**
+     * 
+     * @param String $communityId
+     * @param String $newName
+     * @return HashtableString
+     */
+    public function renameCommunity($communityId, $newName);
+
     /**
      * 
      * @param String $userId
@@ -64,7 +82,6 @@ interface OpenM_Book_Moderator extends OpenM_Book_Const {
      * @return HashtableString
      */
     public function blockUserRegistry($userId, $communityId);
-    
 }
 
 ?>
