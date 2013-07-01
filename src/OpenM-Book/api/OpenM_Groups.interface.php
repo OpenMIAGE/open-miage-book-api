@@ -61,7 +61,7 @@ interface OpenM_Groups extends OpenM_Book_Const {
 
     public function getMyGroups();
 
-    public function getMyCommunities();
+    public function getCommunities($userId = null);
 
     public function getMyCommunitiesAndGroups();
 
