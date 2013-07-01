@@ -3,7 +3,8 @@
 Import::php("OpenM-Book.api.OpenM_Book_Const");
 
 /**
- *
+ * Used to manage user personnal groups
+ * Those groups could be used to manage permissions (for visibility for example).
  * @package OpenM  
  * @subpackage OpenM\OpenM-Book\api 
  * @license http://www.apache.org/licenses/LICENSE-2.0 Licensed under the Apache License, Version 2.0 (the "License");
@@ -42,26 +43,60 @@ interface OpenM_Groups extends OpenM_Book_Const {
     const RETURN_RESULT_TYPE_USER_VALUE = "U";
     const RETURN_RESULT_TYPE_GROUP_VALUE = "G";
     const RETURN_USER_IN_GROUP_PARAMETER = "UIG";
-    const RETURN_USER_IN_GROUP_TRUE_VALUE = 1;
-    const RETURN_USER_IN_GROUP_FALSE_VALUE = 0;
+    const RETURN_COMMUNITY_ANCESTORS_LIST = "CAL";
+    const RETURN_USER_IN_GROUP_TRUE_VALUE = self::TRUE_PARAMETER_VALUE;
+    const RETURN_USER_IN_GROUP_FALSE_VALUE = self::FALSE_PARAMETER_VALUE;
 
+    /**
+     * Used to create a personnal group
+     * @param String $groupName is name of group
+     * @return HashtableString contains group id
+     */
     public function createGroup($groupName);
 
+    /**
+     * used to remove a personnal group
+     * @param int $groupId is the id of group to remove
+     * @return HashtableString contains OK if group exists
+     */
     public function removeGroup($groupId);
 
+    /**
+     * used to rename a group
+     * @param int $groupId is the id of group to rename
+     * @param String $groupName is new name of group
+     * @return HashtableString contains OK
+     */
     public function renameGroup($groupId, $groupName);
 
+    /**
+     * used to add a group into another group
+     * @param int $groupId is the id of group source you want to add in another group
+     * @param int $groupIdTarget is the id of group you want to add another group into
+     */
     public function addGroupIntoGroup($groupId, $groupIdTarget);
 
+    /**
+     * used to remove a group from another group
+     * @param int $groupId is id of group to remove from group
+     * @param int $groupParentId is id of group that contain group to remove from
+     * @return HashtableString contains OK if group was realy into the group
+     */
     public function removeGroupFromGroup($groupId, $groupParentId);
 
+    /**
+     * used to add user into another group
+     * @param int $userId is id of user you want to add in group
+     * @param int $groupId is id of group you want to add a user into
+     * @return HashtableString contains OK if group group and user exist and the group is your's
+     */
     public function addUserIntoGroup($userId, $groupId);
 
     public function removeUserFromGroup($userId, $groupId);
 
     public function getMyGroups();
 
-    public function getCommunities($userId = null);
+    public function getCommunities($userId = null, $withAncestors = null);
 
     public function getMyCommunitiesAndGroups();
 
