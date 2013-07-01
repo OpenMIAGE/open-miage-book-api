@@ -43,6 +43,7 @@ interface OpenM_Groups extends OpenM_Book_Const {
     const RETURN_RESULT_TYPE_USER_VALUE = "U";
     const RETURN_RESULT_TYPE_GROUP_VALUE = "G";
     const RETURN_USER_IN_GROUP_PARAMETER = "UIG";
+    const RETURN_COMMUNITY_ANCESTORS_LIST = "CAL";
     const RETURN_USER_IN_GROUP_TRUE_VALUE = self::TRUE_PARAMETER_VALUE;
     const RETURN_USER_IN_GROUP_FALSE_VALUE = self::FALSE_PARAMETER_VALUE;
 
@@ -95,7 +96,7 @@ interface OpenM_Groups extends OpenM_Book_Const {
 
     public function getMyGroups();
 
-    public function getCommunities($userId = null);
+    public function getCommunities($userId = null, $withAncestors = null);
 
     public function getMyCommunitiesAndGroups();
 
