@@ -103,13 +103,6 @@ interface OpenM_Book extends OpenM_Book_Const {
 
     /**
      * 
-     * @param type $mailJSONList
-     * @return HashtableString
-     */
-    public function invitPeople($mailJSONList);
-
-    /**
-     * 
      * @param type $type
      * @param type $url
      * @param type $message
