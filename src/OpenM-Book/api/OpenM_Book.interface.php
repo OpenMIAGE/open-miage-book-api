@@ -21,8 +21,8 @@ Import::php("OpenM-Book.api.OpenM_Book_Const");
  * @author Nicolas Rouzeaud & Gaël SAUNIER
  */
 interface OpenM_Book extends OpenM_Book_Const {
-
     //signal const
+
     const SIGNAL_TYPE_BUG = "BUG";
 
     /**
@@ -90,16 +90,16 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param String $itempId
      * @return HashtableString 
      */
-    public function removeMeFromCommunity($communistyId);
+    public function removeMeFromCommunity($communityId);
 
     /**
-     * permet de valider un utilisateur, ou validation par paires
+     * permet de voter pour un utilisateur (pour la validation par paires)
      * nécéssite la confirmation d'un modérateur
      * @param String $userId
      * @param String $communityId
      * @return HashtableString
      */
-    public function validateUser($userId, $communityId);
+    public function voteForUser($userId, $communityId, $raison = null);
 
     /**
      * 
@@ -115,7 +115,6 @@ interface OpenM_Book extends OpenM_Book_Const {
      * @param type $message
      */
     public function signal($url, $message, $type = self::SIGNAL_TYPE_BUG, $id = null);
-
 }
 
 ?>

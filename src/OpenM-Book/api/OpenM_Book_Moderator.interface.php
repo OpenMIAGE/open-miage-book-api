@@ -81,7 +81,18 @@ interface OpenM_Book_Moderator extends OpenM_Book_Const {
      * @param String $communityId
      * @return HashtableString
      */
-    public function blockUserRegistry($userId, $communityId);
+    public function banUserFromCommunity($userId, $communityId);
+    
+    
+    /**
+     * permet de valider un utilisateur, ou validation par paires
+     * nécéssite la confirmation d'un modérateur
+     * @param String $userId
+     * @param String $communityId
+     * @return HashtableString
+     */
+    public function validateUser($userId, $communityId);
+
 }
 
 ?>
