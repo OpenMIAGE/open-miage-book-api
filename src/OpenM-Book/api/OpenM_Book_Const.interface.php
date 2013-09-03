@@ -41,6 +41,7 @@ interface OpenM_Book_Const extends OpenM_Service {
 
     //return community parameters
     const RETURN_COMMUNITY_NAME_PARAMETER = "CNA";
+    const RETURN_COMMUNITY_USER_ALREADY_ACCEPTED_BY_YOU = "UABY";
     const RETURN_COMMUNITY_ID_PARAMETER = "CID";
     const RETURN_COMMUNITY_PARENT_PARAMETER = "CPP";
     const RETURN_COMMUNITY_CHILDS_PARAMETER = "CCP";
