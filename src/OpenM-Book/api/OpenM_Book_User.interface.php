@@ -108,6 +108,14 @@ interface OpenM_Book_User extends OpenM_Book_Const {
      * @return HashtableString contient un boolean
      */
     public function unRegisterMe();
+    
+    /**
+     * 
+     * @param type $mailJSONList
+     * @return HashtableString
+     */
+    public function invitPeople($mailJSONList);
+
 }
 
 ?>
