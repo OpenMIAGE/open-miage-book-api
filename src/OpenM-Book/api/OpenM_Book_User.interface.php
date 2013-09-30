@@ -31,6 +31,8 @@ interface OpenM_Book_User extends OpenM_Book_Const {
     const RETURN_USER_LAST_NAME_PARAMETER = "ULN";
     const RETURN_USER_PROPERTY_VALUE_PARAMETER = "UPV";
     const RETURN_USER_IS_ADMIN_PARAMETER = "UIA";
+    const RETURN_USER_BIRTHDAY_PARAMETER = "UBI";
+    const RETURN_USER_BIRTHDAY_DISPLAY_YEAR_PARAMETER = "UBDY";
 
     //prefiled value
     const FIRST_NAME_PROPERTY_VALUE_ID = -1;
@@ -83,9 +85,10 @@ interface OpenM_Book_User extends OpenM_Book_Const {
      * @param String $firstName
      * @param String $lastName
      * @param String $birthDay
+     * @param String $mail
      * @return HashtableString 
      */
-    public function registerMe($firstName, $lastName, $birthDay);
+    public function registerMe($firstName, $lastName, $birthDay, $mail);
 
     /**
      * ajoute ou modifie une valeur d'une propriétés
