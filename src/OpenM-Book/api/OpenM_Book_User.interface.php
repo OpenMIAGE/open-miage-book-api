@@ -85,9 +85,10 @@ interface OpenM_Book_User extends OpenM_Book_Const {
      * @param String $firstName
      * @param String $lastName
      * @param String $birthDay
+     * @param String $mail
      * @return HashtableString 
      */
-    public function registerMe($firstName, $lastName, $birthDay);
+    public function registerMe($firstName, $lastName, $birthDay, $mail);
 
     /**
      * ajoute ou modifie une valeur d'une propriétés
