@@ -101,9 +101,7 @@ interface OpenM_Groups extends OpenM_Book_Const {
 
     public function getMyCommunitiesAndGroups();
 
-    public function getUsersFromGroup($groupId);
-
-    public function getGroupsFromGroup($groupId);
+    public function getGroupContent($groupId);
 
     public function search($terms, $maxNumberResult = null, $userOnly = null);
 
