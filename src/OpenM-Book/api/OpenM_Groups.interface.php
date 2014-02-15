@@ -41,7 +41,8 @@ interface OpenM_Groups extends OpenM_Book_Const {
     const RETURN_RESULT_NAME_PARAMETER = "RNA";
     const RETURN_RESULT_TYPE_PARAMETER = "RTY";
     const RETURN_RESULT_TYPE_USER_VALUE = "U";
-    const RETURN_RESULT_TYPE_GROUP_VALUE = "G";
+    const RETURN_RESULT_TYPE_GENERIC_GROUP_VALUE = "GG";
+    const RETURN_RESULT_TYPE_PERSONAL_GROUP_VALUE = "PG";
     const RETURN_USER_IN_GROUP_PARAMETER = "UIG";
     const RETURN_COMMUNITY_ANCESTORS_LIST = "CAL";
     const RETURN_USER_IN_GROUP_TRUE_VALUE = self::TRUE_PARAMETER_VALUE;
@@ -100,9 +101,7 @@ interface OpenM_Groups extends OpenM_Book_Const {
 
     public function getMyCommunitiesAndGroups();
 
-    public function getUsersFromGroup($groupId);
-
-    public function getGroupsFromGroup($groupId);
+    public function getGroupContent($groupId);
 
     public function search($terms, $maxNumberResult = null, $userOnly = null);
 
