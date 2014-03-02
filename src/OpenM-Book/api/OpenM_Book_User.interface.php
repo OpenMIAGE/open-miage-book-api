@@ -50,6 +50,13 @@ interface OpenM_Book_User extends OpenM_Book_Const {
     const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_YOUNG_VALUE = "You're too young to register, the age limit is 13 years old";
     const RETURN_ERROR_MESSAGE_PROPERTY_NOTFOUND_VALUE = "Property not found";
 
+    //error message on register
+    const RETURN_ERROR_CODE_FIRST_NAME_BAD_FORMAT_VALUE = 101;
+    const RETURN_ERROR_CODE_LAST_NAME_BAD_FORMAT_VALUE = 102;
+    const RETURN_ERROR_CODE_BIRTHDAY_BAD_FORMAT_VALUE = 103;
+    const RETURN_ERROR_CODE_MAIL_BAD_FORMAT_VALUE = 104;
+    const RETURN_ERROR_CODE_TO_YOUNG_VALUE = 105;
+
     /**
      * retourne toutes les propriétés et group ect... de l'user
      * @return HashtableString les propriétés et item(gorupe)
@@ -111,14 +118,13 @@ interface OpenM_Book_User extends OpenM_Book_Const {
      * @return HashtableString contient un boolean
      */
     public function unRegisterMe();
-    
+
     /**
      * 
      * @param type $mailJSONList
      * @return HashtableString
      */
     public function invitPeople($mailJSONList);
-
 }
 
 ?>
