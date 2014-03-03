@@ -49,7 +49,7 @@ interface OpenM_Book_User extends OpenM_Book_Const {
     //error message
     const RETURN_ERROR_MESSAGE_USER_ALREADY_REGISTERED_VALUE = "User already registered";
     const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_YOUNG_VALUE = "You're too young to register, the age limit is 13 years old";
-    const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_OLD_VALUE = "You're too young to register, the age limit is 13 years old";
+    const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_OLD_VALUE = "You're too old to register, the age limit is 140 years old";
     const RETURN_ERROR_MESSAGE_PROPERTY_NOTFOUND_VALUE = "Property not found";
 
     //error message on register
