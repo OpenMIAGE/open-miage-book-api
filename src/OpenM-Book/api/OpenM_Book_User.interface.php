@@ -40,6 +40,7 @@ interface OpenM_Book_User extends OpenM_Book_Const {
     const PHOTO_ID_PROPERTY_VALUE_ID = -3;
     const DEFAULT_EMAIL_PROPERTY_VALUE_ID = -4;
     const BIRTHDAY_ID_PROPERTY_VALUE_ID = -5;
+    const BIRTHDAY_VISIBILITY_PROPERTY_VALUE_ID = -6;
     const AGE_LIMIT_TO_REGISTER = 13;
     const AGE_MAX_TO_REGISTER = 140;
 
