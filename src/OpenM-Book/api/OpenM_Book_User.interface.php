@@ -23,7 +23,7 @@ Import::php("OpenM-Book.api.OpenM_Book_Const");
 interface OpenM_Book_User extends OpenM_Book_Const {
 
     const RETURN_USER_PROPERTY_LIST_PARAMETER = "UPL";
-    const RETURN_USER_GROUP_PROPERTY_VISIBILITY_LIST_PARAMETER = "PGVL";
+    const RETURN_USER_PROPERTY_VALUE_VISIBILITY_PARAMETER = "UPVV";
     const RETURN_USER_PROPERTY_ID_PARAMETER = "PID";
     const RETURN_USER_PROPERTY_VALUE_ID_PARAMETER = "PVID";
     const RETURN_USER_PROPERTY_NAME_PARAMETER = "UPN";
@@ -40,7 +40,9 @@ interface OpenM_Book_User extends OpenM_Book_Const {
     const PHOTO_ID_PROPERTY_VALUE_ID = -3;
     const DEFAULT_EMAIL_PROPERTY_VALUE_ID = -4;
     const BIRTHDAY_ID_PROPERTY_VALUE_ID = -5;
+    const BIRTHDAY_VISIBILITY_PROPERTY_VALUE_ID = -6;
     const AGE_LIMIT_TO_REGISTER = 13;
+    const AGE_MAX_TO_REGISTER = 140;
 
     //property pattern
     const PROPERTY_NAME_PATTERN = "/^[a-z](([a-z]|\.)*[a-z])?$/";
@@ -48,6 +50,7 @@ interface OpenM_Book_User extends OpenM_Book_Const {
     //error message
     const RETURN_ERROR_MESSAGE_USER_ALREADY_REGISTERED_VALUE = "User already registered";
     const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_YOUNG_VALUE = "You're too young to register, the age limit is 13 years old";
+    const RETURN_ERROR_MESSAGE_YOU_ARE_TOO_OLD_VALUE = "You're too old to register, the age limit is 140 years old";
     const RETURN_ERROR_MESSAGE_PROPERTY_NOTFOUND_VALUE = "Property not found";
 
     //error message on register
@@ -55,7 +58,8 @@ interface OpenM_Book_User extends OpenM_Book_Const {
     const RETURN_ERROR_CODE_LAST_NAME_BAD_FORMAT_VALUE = 102;
     const RETURN_ERROR_CODE_BIRTHDAY_BAD_FORMAT_VALUE = 103;
     const RETURN_ERROR_CODE_MAIL_BAD_FORMAT_VALUE = 104;
-    const RETURN_ERROR_CODE_TO_YOUNG_VALUE = 105;
+    const RETURN_ERROR_CODE_TOO_YOUNG_VALUE = 105;
+    const RETURN_ERROR_CODE_TOO_OLD_VALUE = 106;
 
     /**
      * retourne toutes les propriétés et group ect... de l'user
